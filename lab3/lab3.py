@@ -103,8 +103,12 @@ def changeLogin(id):
 def changePassword(id):
     cls()
     print("Change Password")
-    user[id][1] = input("Create a password: ")
-    print("Password successfully changed!")
+    currentPass = input("Enter current password: ")
+    if currentPass == user[id][1]:
+        user[id][1] = input("Create a new password: ")
+        print("Password successfully changed!")
+    else:
+        print("Password is incorrect!")
     rewriteBd()
     os.system('pause')
     return
