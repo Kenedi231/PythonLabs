@@ -1,0 +1,2 @@
+0 root root admin
+1 kolya help user
